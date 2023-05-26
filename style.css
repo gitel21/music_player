@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #121212;
+  --background2:#AA7339;
+  --background3:#F5F5F5;
+  --text: #FFE6AA;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Tangerine', cursive, sans-serif;
+  font-size: 12px;
+  color: var(--text);
+}
+
+.player-container {
+  height: 500px;
+  width: 400px;
+  background: var(--background2);
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px 5px rgba(212, 161, 106, 0.1)
+}
+
+.img-container {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  top: -50px;
+  left: 50px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px 5px rgba(212, 161, 106, 0.5)
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 5px 0 0;
+}
+
+/* Progress */
+.progress-container {
+  background: var(--background3);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+.progress {
+  background: var(--background);
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  color: var(--background);
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  top: -35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 120px;
+  width: 200px;
+}
+
+.fa-solid {
+  font-size: 30px;
+  color: var(--background);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa-solid:hover {
+  color: var(--background3);
+}
+
+.fa-solid:active {
+  box-shadow: 0px 2px var(--text);
+}
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+
+  .player-container{
+    width: 95vw;
+  }
+
+  .img-container {
+    left: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
